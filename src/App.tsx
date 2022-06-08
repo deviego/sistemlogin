@@ -1,5 +1,6 @@
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { RequireAuth } from "./context/auth/RequireAuth";
 import {Home} from './pages/Home';
 import {Private} from './pages/Private';
 
@@ -15,7 +16,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/private" element={<Private/>} />
+        <Route path="/private" element={<RequireAuth><Private/></RequireAuth> } />
       </Routes>
     </div>
   );
