@@ -16,7 +16,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/private" element={<RequireAuth><Private/></RequireAuth> } />
+        <Route path="/private" element={<RequireAuth> <Private/></RequireAuth> } />
       </Routes>
     </div>
   );
